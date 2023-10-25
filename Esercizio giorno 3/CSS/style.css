@@ -1,0 +1,45 @@
+*{
+    font-family: 'Merriweather', serif;
+}
+
+
+body:not(#featured){
+    color: #2e2c2c;
+}
+header img{
+    width: 15vw;
+}
+
+header span{
+    font-weight: bold;
+}
+
+header p{
+    color: #107777;
+    background-color: #fdfbf1;
+}
+
+#ingredients p{
+    font-weight: bold;
+}
+
+#featured{
+    line-height: 1px;
+}
+
+#featured p{
+    color: #b5460f;
+}
+
+figcaption{
+    color: #9b9b9b;
+}
+
+main img{
+    border-radius: 0.6em;
+    box-shadow: 0.1em 0.1em 0.1em grey;
+}
+
+li span{
+    font-weight: bold;
+}
