@@ -2,12 +2,12 @@
     font-family: 'Merriweather', serif;
 }
 
-
 body:not(#featured){
     color: #2e2c2c;
 }
+
 header img{
-    width: 15vw;
+    width: 200px;
 }
 
 header span{
