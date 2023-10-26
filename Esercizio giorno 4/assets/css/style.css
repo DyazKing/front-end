@@ -1,0 +1,200 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 310px;
+    margin: 0 auto;
+    background-image: url(../img/sfondo.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+/* HEADER */
+header {
+    color: white;
+    background-color: #0088aa;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: content-box;
+    box-shadow: 10px 10px 10px grey;
+}
+header img{
+    padding: 20px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+
+header ul{
+    list-style: none;
+    padding: 20px;
+    font-weight: bold;
+}
+
+header li{
+    padding: 5px;
+}
+
+header p{
+    padding: 10px;
+    font-weight: bold;
+}
+/* MAIN */
+main{
+    background-color: white;
+    box-shadow: 10px 10px 10px grey;
+    padding-bottom: 20px;
+}
+/* ELEMENTI NEL MAIN - ARTICLE */
+main h1{
+    padding: 10px;
+}
+
+main p{
+    padding: 15px;
+}
+
+main ul {
+    list-style: disc;
+}
+
+main ol{
+    list-style: decimal;
+}
+
+code{
+    background-color: lightgray;
+    border-radius: 5px;
+    line-height: 40px;
+}
+#credits{
+    color: #a4a2a4;
+    padding: 5px;
+}
+
+.purple{
+    color: #da409c;
+    font-weight: bold;
+}
+
+a{
+   color: #329fca;
+}
+
+iframe {
+    border-radius: 30px;
+    height: fit-content;
+    padding: 3px;
+}
+
+.article{
+    background-color: lightgray;
+    border: 1px solid rgb(197, 188, 188);
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.date{
+    text-align: right;
+    font-size: 11px;
+}
+
+.article a{
+   padding: 15px;
+}
+
+
+
+/* TABELLE */
+caption{
+    font-weight: bold;
+    font-style: italic;
+}
+
+thead{
+    color: white;
+   background-color: #3366CC ;
+}
+
+table, th, td{
+    text-align: center;
+    margin: 0 10px
+}
+
+tr th{
+    border-left: 1px solid rgb(167, 187, 231, 50%);
+}
+
+th{
+    padding: 15px;
+}
+
+td{
+    padding: 10px;
+}
+
+td, tr {
+    padding: 1em;
+    border-bottom: 1px solid rgb(197, 188, 188);
+}
+
+table{
+    border-bottom: 0.3em solid #2568e4;
+}
+
+.table{
+    background-color: lightgray;
+}
+/* FORM */
+section{
+    background-color: lightgray;
+    padding: 5px;
+    margin: 10px 10px;
+}
+
+h2{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+form input{
+    border: none;
+    border-bottom: 1px dashed;
+    padding: 3px;
+}
+
+form button{
+    background-color: #3366cc;
+    color: white;
+    border: none;
+    padding: 3px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #0a5069;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    box-shadow: inset 9px 0px 59px -20px black;
+
+}
+footer p{
+    padding: 10px;
+
+}
+
+ address{
+    padding: 15px
+
+ }
+footer a{
+    text-decoration: none;
+}
