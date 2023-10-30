@@ -70,9 +70,8 @@ console.log(x);
 /* SCRIVI QUI LA TUA RISPOSTA */
 let name1 = "john";
 let name2 = "John";
-let diff = name1 != name2;
+let diff = name1 !== name2;
 console.log(diff);
-
-name1.toLowerCase();
-name2.toLowerCase();
-console.log(diff);
+//Uguaglianza true in lowercase
+let lower = name1.toLowerCase() === name2.toLowerCase();
+console.log(lower);
