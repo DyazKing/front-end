@@ -63,7 +63,7 @@ let totalShoppingCart = 40;
 if (totalShoppingCart >= 50){
   console.log("Hai diritto alla spedizione gratuita. Totale ordine = " + totalShoppingCart);
 } else {
-  console.log("Non hai diritto alla spedizione gratuita. Totale ordine = " , totalShoppingCart + 10);
+  console.log("Non hai diritto alla spedizione gratuita. Costo di spedizione di 10. Totale ordine = " , totalShoppingCart + 10);
 }
 
 /* ESERCIZIO 6
@@ -195,5 +195,5 @@ console.log(arr)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-arr.splice(9, 9, 100)
+arr.splice(9, 1, 100)
 console.log(arr)
