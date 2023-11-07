@@ -105,8 +105,13 @@ latestShoppingCart(shoppingCart)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function loopUntil(x){
-
+    let num = 0
+    while(num < x){
+        num = Math.floor(Math.random() * 10);
+        console.log(num)
+    }
 }
+loopUntil(7)
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
