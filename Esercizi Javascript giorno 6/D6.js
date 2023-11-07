@@ -226,12 +226,15 @@ let milleniumMovie = movies.filter(val => {if(val.Year > millenium){console.log(
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-let sumMovie = movies.reduce((acc, value) => acc.Year + value.Year, 0)
+let sumMovie = movies.reduce((acc, value) => acc + Number(value.Year), 0)
 console.log(sumMovie)
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-
+let findMovie = movies.find(element => element.imdbID === 'tt0848228')
+console.log(findMovie)
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+let indexMovie = movies.findIndex(val => val.Year === "2002")
+console.log(indexMovie)
