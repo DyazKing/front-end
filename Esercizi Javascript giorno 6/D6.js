@@ -47,10 +47,9 @@ sum(numbers2)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 let sum2 = (arr) => {
-  arr.reduce((acc, value) => acc + value, 0)
-  console.log(sum2)
+  return arr.reduce((acc, value) => acc + value, 0)
 }
-sum(numbers2)
+console.log(sum2(numbers2))
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
@@ -72,8 +71,8 @@ strLeng(str1)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 let numbers4 = [];
-function odd(arr){
-  for(let i = 1; i <= 100;i++){
+function odd(){
+  for(let i = 0; i <= 100;i++){
     if(i % 2 === 1){
       numbers4.push(i)
     }
