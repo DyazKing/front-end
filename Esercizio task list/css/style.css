@@ -20,6 +20,17 @@ h1{
     font-family: 'Edu TAS Beginner', cursive;
     
 }
+p{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+#complete{
+    color: red;
+    text-decoration: line-through;
+}
 
 input{
     border: 2px solid black;
