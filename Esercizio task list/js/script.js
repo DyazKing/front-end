@@ -5,10 +5,11 @@ addTask.addEventListener("click" , () => {
     let input = document.querySelector("#input")
     let text = document.createTextNode(input.value)
     li.appendChild(text)
-    if(text.length < 1){
+    if(input.value.trim().length < 1){
         alert("Scrivi qualcosa")
     } else{
         ul.appendChild(li)
+        input.value = ""
         let deleteBut = document.createElement("button")
         deleteBut.innerText = "Elimina"
         deleteBut.classList.add("deleteButton")
