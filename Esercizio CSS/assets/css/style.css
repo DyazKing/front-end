@@ -505,3 +505,9 @@ aside div{
     bottom: 11em
   }
 }
+
+@media screen and (max-width: 434px){
+  h1{
+    font-size: 2.5rem;
+  }
+}
