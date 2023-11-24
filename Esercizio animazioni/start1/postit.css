@@ -1,0 +1,55 @@
+body{
+    background-color: #666666;
+    font-family: 'Indie Flower', sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.tasknum{
+    font-weight: bold;
+    padding: 10px;
+    font-size: 40px;
+}
+.task{
+    font-size:20px ;
+}
+.yellow{
+    background-color: #F9FAC8;
+    transform: rotate(-6deg);
+}
+
+.green{
+    background-color: #C4F4C7;
+    transform: rotate(6deg);
+}
+
+.blue{
+    background-color: #C3C4ED;
+    transform: rotate(-6deg);
+}
+
+.post:hover{
+    transform: scale(1.2) ;
+    transition: transform  1.5s ease-in-out ;
+    box-shadow: 10px 5px 5px black;
+
+}
+
+.post:not(:hover){
+    transform: scale(-6deg);
+    transition-duration: 2s;
+}
