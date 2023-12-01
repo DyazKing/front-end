@@ -1,0 +1,27 @@
+/* Style scss */
+
+@import "reset";
+@import "colori";
+@import "mixin-generici";
+
+
+body{
+    background-color: $light-color-primary;
+    h1{
+        color: $darken-color-primary;
+    }
+    p{
+        @include nomeMixin();
+        @include paramMixin(1.3em, normal);
+    }
+}
+
+footer{
+    @include backGMixin("color", $darken-color-primary);
+    
+    h3{
+        @include nomeMixin();
+        @include paramMixin(2.5em, lighter);
+        text-decoration: underline;
+    }
+}

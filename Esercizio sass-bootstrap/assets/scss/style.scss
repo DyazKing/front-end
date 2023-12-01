@@ -1,0 +1,19 @@
+@import "../scss/ovveride-bootstrap";
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.bell{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boh{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

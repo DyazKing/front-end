@@ -1,0 +1,13 @@
+@import "../../bootstrap-5.3.2/scss/functions";
+@import "../../bootstrap-5.3.2/scss/variables";
+
+$purple: purple;
+$green: rgb(46, 211, 46);
+$custom-colors: (
+    "purple": $purple
+    "green": $green
+);
+
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+@import "../../bootstrap-5.3.2/scss/bootstrap.scss";

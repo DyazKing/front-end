@@ -1,0 +1,16 @@
+/* Mixin Generici */
+
+@mixin nomeMixin(){
+    color: white;
+    text-align: center;
+}
+
+@mixin paramMixin($primaryFont, $weight){
+    font-weight: $weight;
+    font-size: $primaryFont;
+}
+
+@mixin backGMixin($prop, $value){
+    background-#{$prop}: $value;
+    #{$prop}: darken($value, 25%);
+}
