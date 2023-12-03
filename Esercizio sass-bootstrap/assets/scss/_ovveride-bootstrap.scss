@@ -1,11 +1,13 @@
 @import "../../bootstrap-5.3.2/scss/functions";
 @import "../../bootstrap-5.3.2/scss/variables";
 
-$purple: purple;
-$green: rgb(46, 211, 46);
+$purple: #7550FE;
+$green: #1ACB98;
+$red: #FFEEDA;
 $custom-colors: (
-    "purple": $purple
-    "green": $green
+    "purple": $purple,
+    "green": $green,
+    "red": $red
 );
 
 
