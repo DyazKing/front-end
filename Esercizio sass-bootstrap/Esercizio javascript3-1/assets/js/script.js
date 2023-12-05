@@ -27,11 +27,13 @@ console.log(g.confronto(f));
 
 
 class Pet{
+    static count = 0;
     constructor(petName, ownerName, species, breed){
         this.petName = petName;
         this.ownerName = ownerName;
         this.species = species;
         this.breed = breed;
+        Pet.count++;
     }
 
     ownerNameTest(pet){
@@ -43,12 +45,12 @@ class Pet{
     }
 }
 
-let p1 = new Pet ("Bobby", "Manuel", "cane", "labrador");
-let p2 = new Pet ("Billy", "Mario", "gatto", "persiano")
+/* let p1 = new Pet ("Bobby", "Manuel", "cane", "labrador");
+let p2 = new Pet ("Billy", "Mario", "gatto", "persiano") */
 
-console.log(p1);
+/* console.log(p1);
 console.log(p2);
-console.log(p1.ownerNameTest(p2))
+console.log(p1.ownerNameTest(p2)) */
 
 let formBtn = document.querySelector("#petForm button")
 formBtn.addEventListener("click", () =>{
@@ -60,6 +62,10 @@ formBtn.addEventListener("click", () =>{
     
     let p = new Pet(petName, ownerName, species, breed);
     addList(p)
+    f[0].value = "";
+    f[1].value = "";
+    f[2].value = "";
+    f[3].value = "";
 })
 
 function addList(p){
@@ -70,7 +76,8 @@ function addList(p){
     <strong>petName: </strong> ${p.petName}
     <strong>ownerName: </strong> ${p.ownerName}
     <strong>species: </strong> ${p.species}
-    <strong>petName: </strong> ${p.breed}
+    <strong>breed: </strong> ${p.breed}
     `;
     ul.appendChild(li)
+    document.querySelector("#listPet h3 span").innerText = Pet.count;
 }
