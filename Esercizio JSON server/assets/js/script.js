@@ -40,7 +40,13 @@ function login(){
                 password: document.querySelector("#exampleInputPassword1").value
             })
         }).then((response) => response.json())
-        .then(json => console.log(json))
+        .then(json => {console.log(json)
+            if (json.accessToken) {
+                alert('Login effettuato')
+            } else {
+                alert('Credenziali errate')
+            }
+        })
         .catch(err => console.log(err))
     })
 }
