@@ -12,5 +12,5 @@
 *.vsix
 
 
-_nod-modules/
+node_modules/
 bootstrap-5.3.2/
