@@ -1,33 +1,81 @@
-import { Component } from "react";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import fantasyBooks from "../assets/json/fantasy.json";
-import historyBooks from "../assets/json/history.json";
-import horrorBooks from "../assets/json/horror.json";
-import romanceBooks from "../assets/json/romance.json";
-import scifiBooks from "../assets/json/scifi.json";
-
-let fantasy = fantasyBooks;
-let history = historyBooks;
-let horror = horrorBooks;
-let romance = romanceBooks;
-let scifi = scifiBooks;
-console.log(fantasy, history, horror, romance, scifi);
+import React, { Component } from 'react';
+import Fantasy from '../assets/json/fantasy.json';
+import History from '../assets/json/history.json';
+import Horror from '../assets/json/horror.json';
+import Romance from '../assets/json/romance.json';
+import Scifi from '../assets/json/scifi.json';
+import BookList from './BookList';
+import { Button, Col, Form, Row } from 'react-bootstrap';
 
 export default class AllTheBooks extends Component {
-  render() {
-    return (
-      <Container>
-        <h2 className="my-3">Fantasy</h2>
-        <Row className="gap-3 justify-content-between">
-          {fantasy.map((book) => (
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={book.img} />
-            </Card>
-          ))}
-        </Row>
-      </Container>
-    );
+
+  state = {
+      books: [],
+      searchQuery: '',
+      filterBooks: []
   }
-}
+  
+  componentDidMount() {
+       this.setState({ 
+          books: {
+              ...this.state.books,
+              fantasy: Fantasy,
+              history: History,
+              horror: Horror,
+              romance: Romance,
+              scifi: Scifi
+          } 
+      })
+  
+       this.setState({ 
+          books: [...Fantasy, ...History, ...Horror, ...Romance, ...Scifi]
+          } 
+      ) 
+  
+      fetch('../books/fantasy.json').then(response => response.json()).then(json => this.setState({ 
+          books: [ ...this.state.books, ...json ]
+      }))
+      fetch('../books/history.json').then(response => response.json()).then(json => this.setState({ 
+          books: [ ...this.state.books, ...json ]
+      }))
+      fetch('../books/horror.json').then(response => response.json()).then(json => this.setState({ 
+          books: [ ...this.state.books, ...json ]
+      }))
+      
+  }
+  
+      getSearchQuery = () => {
+          //alert(this.state.searchQuery)
+          let filter = this.state.books.filter(book => book.title.includes(this.state.searchQuery))
+          this.setState({filterBooks: filter})
+      }
+  
+      render() {
+          //console.log(this.state.searchQuery) 
+          return (
+              <>
+                  <Row className="my-3">
+                      <Col lg={10}>
+                          <Form.Control 
+                              type="text" 
+                              placeholder="Search Book Title..." 
+                              onChange={(e) => this.setState({searchQuery: e.target.value})}
+                          />
+                      </Col>
+                      <Col lg={2}>
+                          <Button variant="secondary" onClick={this.getSearchQuery}>Search</Button>
+                      </Col>
+                  </Row>
+                  <BookList books={this.state.filterBooks.length !== 0 ? this.state.filterBooks : this.state.books} />
+                  <h3>Total books: {this.state.books.length}</h3>
+              </>
+          )
+      }
+  }
+  
+  
+  
+  // Destrutturazione di un oggetto con lo spred Operator
+  /* let obj = {name: 'Mario', lastname: 'Rossi'}
+  let txt = {...obj, city: 'San Francisco'}
+  console.log(txt) */
