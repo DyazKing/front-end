@@ -1,6 +1,16 @@
 import React from 'react'
 
 export default function storeReducer(state = [], action) {
-    console.log(state)
+  switch (action.type) {
+    case "ADD_FAVOURITE":
+      return{
+        ...state,
+        favourites: [...state.favourites, action.payload]
+      }
+  
+    default:
+      break;
+  }
+
   return state
 }
